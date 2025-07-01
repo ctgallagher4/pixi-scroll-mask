@@ -1,30 +1,6 @@
-# pixi-scroll-mask
+import { Application, Graphics } from "pixi.js";
+import { ScrollMask } from "../src/index";
 
-v0.1.0
-
-pixi-scroll-mask is a small library for creating an internally scrollable window based on Pixi/UI's `ScrollBox` class. By internally scrollable, we mean that any part of the objects inside the `ScrollMask` that scroll outside the window are hidden. Please see  `/example` for further clarification.
-
-## Install
-
-```bash
-npm install pixi-scroll-mask
-```
-
-## Peer Dependecies
-
-This library requires the following to be installed in your project:
-
-```bash
-npm install pixi.js @pixi/ui
-```
-
-Compatible versions:
- * pixi.js: ^8.0.0
- * @pixi/ui: ^2.0.0
-
-## Usage
-
-```typescript
 (async () => {
   // create a canvas for the application
   const canvas = document.createElement("canvas");
@@ -81,11 +57,3 @@ Compatible versions:
   app.stage.addChild(windowBorder);
   win.addScrollableChild(square);
 })();
-
-```
-
-## License
-
-This project is licensed under the MIT License. Please see [LICENSE](./LICENSE) for details.
-
-This project includes code adapted from Pixi/UI, licensed under the MIT License.

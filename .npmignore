@@ -1,0 +1,4 @@
+example/
+test/
+vite.config.test
+tsconfig.json

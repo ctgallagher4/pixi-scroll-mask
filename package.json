@@ -1,0 +1,63 @@
+{
+  "name": "pixi-scroll-mask",
+  "version": "0.1.0",
+  "description": "A custom PixiJS window component based on @pixi/ui.",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsup src/index.ts --format esm,cjs --dts",
+    "docs": "typedoc"
+  },
+  "tsup": {
+    "entry": [
+      "src/index.ts"
+    ],
+    "format": [
+      "esm",
+      "cjs"
+    ],
+    "dts": true,
+    "external": [
+      "pixi.js",
+      "@pixi/ui"
+    ]
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ctgallagher4/pixi-scroll-mask.git"
+  },
+  "keywords": [
+    "pixi",
+    "mask",
+    "scroll",
+    "typescript"
+  ],
+  "author": "Charlie Gallagher",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ctgallagher4/pixi-scroll-mask/issues"
+  },
+  "homepage": "https://github.com/ctgallagher4/pixi-scroll-mask#readme",
+  "devDependencies": {
+    "@pixi/ui": "^2.2.4",
+    "eslint": "^9.30.0",
+    "pixi.js": "^8.10.2",
+    "tsup": "^8.5.0",
+    "typedoc": "^0.28.7",
+    "typescript": "^5.8.3",
+    "vite": "^7.0.0",
+    "vitest": "^3.2.4"
+  }
+}
